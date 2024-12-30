@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%22-.1em%22 y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
+        />
+        <title>Durvesh's portfolio</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body id="home">
+        <header>
+            <nav class="navbar">
+                <div>
+                    <a id="logo-text" href="index.html">
+                        <span
+                            >&lt;D<span class="logo-remaining-text">urvesh</span
+                            >&gt;</span
+                        >
+                    </a>
+                    <button
+                        data-collapse-toggle="navbar-default"
+                        type="button"
+                        aria-controls="navbar-default"
+                        aria-expanded="false"
+                    >
+                        <span class="sr-only">Open main menu</span>
+                        <svg
+                            class="h-5 w-5"
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 14"
+                        >
+                            <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M1 1h15M1 7h15M1 13h15"
+                            />
+                        </svg>
+                    </button>
+                    <div
+                        class="navLinks-container hidden-elem"
+                        id="navbar-default"
+                    >
+                        <ul class="navLinks-list">
+                            <li>
+                                <a
+                                    href="#home"
+                                    class="navLinks firstChild text-pink-500 bg-pink-500"
+                                    aria-current="page"
+                                    >HOME</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#about" class="navLinks">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="navLinks"
+                                    >PROJECTS</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#contact" class="navLinks">CONTACT</a>
+                            </li>
+                            <li>
+                                <a href="#" id="lastChild" class="navLinks">
+                                    GET RESUME
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="#" id="GetResume" class="navLinks"> GET RESUME </a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Fixed Section -->
+        <section class="hero-section">
+            <!-- Gradient Overlayer -->
+            <div class="gradient-overlayer"></div>
+
+            <!-- Texts Main Container -->
+            <div class="texts-conatiner">
+                <!-- Texts Sub Container -->
+                <div class="texts-sub-conatiner">
+                    <!-- 1st Row -->
+                    <div>
+                        <span id="text-1" class="text-stroke hidden-text"
+                            >Front-end</span
+                        >
+                        <span id="text-2" class="text-stroke hidden-text"
+                            >Developer</span
+                        >
+                    </div>
+                    <!-- 2nd Row -->
+                    <div>
+                        <span id="text-3" class="text-stroke hidden-text"
+                            >Front-end</span
+                        >
+                        <span id="text-4" class="text-stroke hidden-text"
+                            >Developer</span
+                        >
+                    </div>
+                    <!-- 3rd Row -->
+                    <div>
+                        <span id="text-5" class="text-stroke hidden-text"
+                            >Front-end</span
+                        >
+                        <span id="text-6" class="text-stroke hidden-text"
+                            >Developer</span
+                        >
+                    </div>
+                    <!-- 4th Row -->
+                    <div>
+                        <span id="text-7" class="text-stroke hidden-text"
+                            >Front-end</span
+                        >
+                        <span id="text-8" class="text-stroke hidden-text"
+                            >Developer</span
+                        >
+                    </div>
+                    <!-- 5th Row -->
+                    <div>
+                        <span id="text-9" class="text-stroke hidden-text"
+                            >Front-end</span
+                        >
+                        <span id="text-10" class="text-stroke hidden-text"
+                            >Developer</span
+                        >
+                    </div>
+                </div>
+            </div>
+            <!-- Picture Frame -->
+            <div class="picture-frame">
+                <div class="pic-main">
+                    <img
+                        src="./assets/images/mouseIcon.svg"
+                        class="mouseIcon"
+                    />
+                    <img
+                        src="./assets/images/arrowsIcon.svg"
+                        class="arrowsIcon animate-bounce"
+                    />
+                    <div
+                        style="transition: all 600ms ease-out"
+                        class="pic-main-text"
+                    >
+                        DURVESH
+                    </div>
+                    <img
+                        id="movingElement"
+                        src="./assets/images/avatar.webp"
+                        alt="Avatar"
+                    />
+                </div>
+            </div>
+        </section>
+        <!-- Retro Screen -->
+        <div class="retro-screen"></div>
+        <!-- Flicker -->
+        <div class="flicker-screen-container">
+            <div class="flicker-screen"></div>
+        </div>
+        <!-- Canvas -->
+        <canvas id="canvas1"></canvas>
+        <!-- Monitor Frame -->
+        <div
+            class="outer-border bg-cove pointer-events-none fixed top-0 z-[100] box-border h-[1vh] min-h-full w-full border-[14px] border-b-[#e5d9bf] border-l-[#e5d9bf] border-r-[#f0ead0] border-t-[#f0ead0]"
+        >
+            <div
+                class="middle-border box-border h-full w-full border-[12px] border-b-[#f5f0db] border-l-[#f5f0db] border-r-[#e7e0c4] border-t-[#e7e0c4]"
+            >
+                <div
+                    style="box-shadow: inset 0 0 30px black"
+                    class="inner-border flex h-full w-full border-8 border-black"
+                ></div>
+            </div>
+        </div>
+        <!-- Main -->
+        <main id="about">
+            <!-- About -->
+            <div class="fadeIn about">
+                <!-- column 1 -->
+                <div class="about-col-1">
+                    <div class="about-col-1-child">
+                        <h1>ABOUT ME</h1>
+                        <hr />
+                        <p>
+                            Hi, I'm <b>Duvresh</b>! 👋
+                            <br />
+                            I’m a 18-year-old self-taught front-end developer
+                            based in India. Over the past two years, I’ve been
+                            learning and experimenting with different
+                            technologies, building projects, and improving my
+                            skills.
+                            <br />
+                            <br />
+                            While I haven’t yet worked at a tech company, I’m
+                            eager to start my journey and grow as part of a
+                            dynamic team in the industry.
+                        </p>
+                    </div>
+                    <!-- Dino -->
+                    <div class="dino-container">
+                        <div id="dino-bg"></div>
+                        <div id="cloud"></div>
+                        <div id="dino"></div>
+                        <div id="cactus"></div>
+                        <div id="cactus-2"></div>
+                    </div>
+                </div>
+
+                <!-- column 2 -->
+                <div class="about-col-2">
+                    <pre
+                        class="h-fit w-fit font-mono text-[10px] font-medium sm:text-xs lg:text-base"
+                    >
+<span class="text-keywords">const</span> <span class="text-properties">coder</span> <span class="text-punctuations">= {</span>
+<span class="text-properties">name:</span> <span class="text-punctuations">'</span><span class="text-strings">Durvesh</span><span class="text-punctuations">',</span>
+<span class="text-properties">skills:</span> <span class="text-punctuations">['</span><span class="text-strings">HTML</span><span class="text-punctuations">',</span><span class="text-punctuations">'</span><span class="text-strings">CSS</span><span class="text-punctuations">',</span> <span class="text-punctuations">'</span><span class="text-strings">JavaScript</span><span class="text-punctuations">',</span>
+<span class="text-punctuations">'</span><span class="text-strings">Git</span><span class="text-punctuations">',</span> <span class="text-punctuations">'</span><span class="text-strings">Express JS</span><span class="text-punctuations">',</span> <span class="text-punctuations">'</span><span class="text-strings">Node.js</span><span class="text-punctuations">'</span><span class="text-punctuations">],</span>
+<span class="text-properties">hardWorker:</span> <span class="text-keywords">true</span><span class="text-punctuations">,</span>
+<span class="text-properties">problemSolver:</span> <span class="text-keywords">true</span><span class="text-punctuations">,</span>
+<span class="text-methods">hireable:</span> <span class="text-keywords">function</span><span class="text-punctuations">() {</span>
+  <span class="text-keywords">return</span> <span class="text-punctuations">(</span>
+    <span class="text-methods">this.</span><span class="text-properties">hardWorker</span> <span class="text-strings">&&</span>
+    <span class="text-methods">this.</span><span class="text-properties">problemSolver</span> <span class="text-strings">&&</span>
+    <span class="text-methods">this.</span><span class="text-properties">skills.length</span> <span class="text-strings ">>=</span> <span class="text-methods">6</span>
+  <span class="text-punctuations">);</span>
+<span class="text-punctuations">}</span>
+<span class="text-punctuations">}</span></pre>
+                </div>
+            </div>
+
+            <!-- My skills -->
+            <div class="fadeIn skills-conatiner">
+                <div class="skills-sub-conatiner">
+                    <h1>MY SKILLS</h1>
+                    <hr />
+
+                    <!-- skills -->
+                    <div class="skills-card-container">
+                        <!-- 1st -->
+                        <div id="card-1" class="skill-card">
+                            <!-- icon -->
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/HTML.svg"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="card-desc">
+                                <h3>HTML</h3>
+                                <h4>Website markup language</h4>
+                            </div>
+                        </div>
+
+                        <!-- 2nd -->
+                        <div id="card-2" class="skill-card">
+                            <!-- icon -->
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/CSS.svg"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="card-desc">
+                                <h3>CSS</h3>
+                                <h4>Cascading style sheets</h4>
+                            </div>
+                        </div>
+
+                        <!-- 3rd -->
+                        <div id="card-3" class="skill-card">
+                            <!-- icon -->
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/JavaScript.svg"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="card-desc">
+                                <h3>JavaScript</h3>
+                                <h4>Programming language</h4>
+                            </div>
+                        </div>
+
+                        <!-- 4th -->
+                        <div id="card-4" class="skill-card">
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/Express.svg"
+                                />
+                            </div>
+
+                            <div class="card-desc">
+                                <h3>Express JS</h3>
+                                <h4>Backend web framework</h4>
+                            </div>
+                        </div>
+
+                        <!-- 5th -->
+                        <div id="card-5" class="skill-card">
+                            <!-- icon -->
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/Node-js.svg"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="card-desc">
+                                <h3>Node.js</h3>
+                                <h4>JavaScript runtime</h4>
+                            </div>
+                        </div>
+
+                        <!-- 6th -->
+                        <div id="card-6" class="skill-card">
+                            <!-- icon -->
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/Git.svg"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="card-desc">
+                                <h3>Git</h3>
+                                <h4>Version control system</h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <h1>CURRENTLY LEARNING</h1>
+                    <hr />
+
+                    <!-- currently learning -->
+                    <div class="skills-card-container">
+                        <div id="learning-card-1" class="skill-card">
+                            <!-- icon -->
+                            <div class="card-icon">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/Mongoose.js.svg"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="card-desc">
+                                <h3>Mongoose</h3>
+                                <h4>MongoDB object modeling</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- projects anchor link -->
+                <div id="projects"></div>
+            </div>
+
+            <!-- Projects -->
+            <div class="fadeIn projects-main-container">
+                <div class="projects-sub-container">
+                    <h1>MY PROJECTS</h1>
+                    <hr />
+
+                    <div class="project-container">
+                        <!-- 1st project -->
+                        <div class="project-card">
+                            <!-- image -->
+                            <div class="project-card-img">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/bingo-multiplayer.png"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="project-card-text">
+                                <h3>Bingo Multiplayer</h3>
+                                <h4>A Bingo multiplayer game to play with friends</h4>
+                                <div class="project-tech">
+                                    <div class="tech-card">HTML</div>
+                                    <div class="tech-card">CSS</div>
+                                    <div class="tech-card">JavaScript</div>
+                                    <div class="tech-card">Express JS</div>
+                                    <div class="tech-card">Socket.io</div>
+                                    <div class="tech-card">Node.js</div>
+                                </div>
+                                <div style="height: 2rem; width: 100%"></div>
+                            </div>
+                            <a
+                                href="https://bingo-multiplayer.onrender.com/"
+                                target="_blank"
+                                class="project-view-link"
+                            >
+                                View Project >
+                            </a>
+                        </div>
+
+                        <!-- 2nd project -->
+                        <div class="project-card">
+                            <!-- image -->
+                            <div class="project-card-img">
+                                <img
+                                    loading="lazy"
+                                    src="./assets/images/log-and-antilog.png"
+                                />
+                            </div>
+                            <!-- Text -->
+                            <div class="project-card-text">
+                                <h3>Log & Antilog Visualizer</h3>
+                                <h4>An interactive app that visualizes step-by-step human calculations using a log table.</h4>
+                                <div class="project-tech">
+                                    <div class="tech-card">HTML</div>
+                                    <div class="tech-card">CSS</div>
+                                    <div class="tech-card">JavaScript</div>
+                                </div>
+                                <div style="height: 2rem; width: 100%"></div>
+                            </div>
+                            <a
+                                class="project-view-link"
+                                href="https://durubhuru14.github.io/Log-and-Antilog-App/"
+                                target="_blank"
+                            >
+                                View Project >
+                            </a>
+                        </div>
+
+                        <!-- 3rd project -->
+                    </div>
+                </div>
+                <!-- contact anchor link -->
+                <div id="contact"></div>
+            </div>
+
+            <!-- contact -->
+            <div class="fadeIn contact-container">
+                <div class="contact-sub-container">
+                    <h1>CONTACT ME</h1>
+                    <hr />
+
+                    <form
+                        action="https://formsubmit.co/durveshmore.drm@gmail.com"
+                        method="POST"
+                    >
+                        <div class="input-container">
+                            <div class="input-sub-container">
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Your name"
+                                    required
+                                />
+
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Your email"
+                                    required
+                                />
+                            </div>
+
+                            <textarea
+                                rows="8"
+                                name="message"
+                                id=""
+                                placeholder="Write your message here..."
+                            ></textarea>
+
+                            <div class="action-btn">
+                                <button type="submit">
+                                    Send Message<svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="12"
+                                        height="12"
+                                        fill="currentColor"
+                                        viewBox="0 0 256 256"
+                                    >
+                                        <path
+                                            d="M240,127.89a16,16,0,0,1-8.18,14L63.9,237.9A16.15,16.15,0,0,1,56,240a16,16,0,0,1-15-21.33l27-79.95A4,4,0,0,1,71.72,136H144a8,8,0,0,0,8-8.53,8.19,8.19,0,0,0-8.26-7.47h-72a4,4,0,0,1-3.79-2.72l-27-79.94A16,16,0,0,1,63.84,18.07l168,95.89A16,16,0,0,1,240,127.89Z"
+                                        ></path>
+                                    </svg>
+                                </button>
+
+                                <a href="https://t.me/durubhuru" target="_blank"
+                                    ><svg
+                                        style="height: 1rem; width: 1rem"
+                                        fill="currentColor"
+                                        role="img"
+                                        viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <title>Telegram</title>
+                                        <path
+                                            d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"
+                                        /></svg
+                                    >Telegram
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Credit -->
+            <div class="credits">
+                © <span id="current-year"></span> Durvesh More, All rights
+                reserved.
+                <a href="#home">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        viewBox="0 0 256 256"
+                    >
+                        <path
+                            d="M213.66,165.66a8,8,0,0,1-11.32,0L128,91.31,53.66,165.66a8,8,0,0,1-11.32-11.32l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,213.66,165.66Z"
+                        ></path>
+                    </svg>
+                </a>
+            </div>
+        </main>
+        <script src="./canvas.js"></script>
+        <script src="./main.js"></script>
+    </body>
+</html>
